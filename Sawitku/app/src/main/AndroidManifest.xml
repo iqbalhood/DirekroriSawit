@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.sawitku">
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashScreen"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key"/>
+
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".SignupActivity"/>
+        <activity android:name=".ResetPasswordActivity"/>
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps">
+        </activity>
+
+        <!-- Firebase InstanceId Service -->
+        <service
+            android:name=".FireBaseInstanceIdService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".EditProfileActivity"
+            android:label="Edit Profil">
+        </activity>
+        <activity
+            android:name=".EditProfilPetani"
+            android:label="Edit Profil Petani">
+        </activity>
+        <activity
+            android:name=".EditProfilPeneliti"
+            android:label="Edit Profil Peneliti">
+        </activity>
+        <activity
+            android:name=".EditProfilPraktisi"
+            android:label="Edit Profil Praktisi">
+        </activity>
+        <activity
+            android:name=".EditProfilPerusahaan"
+            android:label="Edit Profil Perusahaan">
+        </activity>
+        <activity android:name=".BuatPertanyaan">
+        </activity>
+        <activity
+            android:name=".ListPertanyaan"
+            android:label="List Petanyaan">
+        </activity>
+        <activity
+            android:name=".TermOfService"
+            android:label="Term Of Service">
+        </activity>
+        <activity
+            android:name=".ListJawaban"
+            android:label="List Jawaban">
+        </activity>
+        <activity
+            android:name=".pickerplace.PickerMapActivity"
+            android:label="Tentukan Lokasi Untuk Marker di Map">
+        </activity>
+        <activity
+            android:name=".DownloadFileActivity"
+            android:label="Download File"/>
+        <activity
+            android:name=".ContactUs"
+            android:label="Contact Us">
+        </activity>
+        <activity android:name=".ProfilUser">
+        </activity>
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".activitydrawer.DownloadFilesActivity">
+        </activity>
+        <activity android:name=".activitydrawer.SearchActivity">
+        </activity>
+        <activity
+            android:name=".PetaActivity"
+            android:label="@string/title_activity_peta"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".PeopleMap"
+            android:label="Map">
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="Login Direktori Sawit">
+        </activity>
+        <activity
+            android:name=".CreateQuestion"
+            android:label="Buat Pertanyaan">
+        </activity>
+        <activity
+            android:name=".CreateAnswer"
+            android:label="Jawab Pertanyaan">
+        </activity>
+        <activity android:name=".EditFotoProfil">
+        </activity>
+    </application>
+
+</manifest>
